@@ -1,3 +1,4 @@
+import './App.css'; // Import the CSS file
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Auth/Login';
@@ -8,10 +9,12 @@ import EventDetails from './components/Events/EventDetails';
 import Newsfeed from './components/Newsfeed/Newsfeed';
 import PrivacySettings from './components/Privacy/PrivacySettings';
 import AdminPanel from './components/Admin/AdminPanel';
+import Navbar from './components/Navbar'; // Import Navbar component
 
 const App = () => {
     return (
         <Router>
+            <Navbar /> {/* Include Navbar component */}
             <Routes>
                 <Route path="/login" component={Login} />
                 <Route path="/register" component={Register} />
